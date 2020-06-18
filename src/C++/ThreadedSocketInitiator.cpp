@@ -81,7 +81,7 @@ void ThreadedSocketInitiator::onStart()
 {
   while ( !isStopped() )
   {
-    time_t now;
+    time_t now = 0;
     ::time( &now );
 
     if ( (now - m_lastConnect) >= m_reconnectInterval )
